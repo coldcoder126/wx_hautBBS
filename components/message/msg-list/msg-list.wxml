@@ -1,0 +1,9 @@
+<!--components/message/msg-list/msg-list.wxml-->
+<view class="container">
+    <image class="avatar" src="{{MsgList.avatarUrl}}" />
+    <view class="content">{{MsgList.message}}</view>
+    <view wx:if="{{!MsgList.haveRead}}" class="status-box" >
+        <image class="status" src="/images/my/notRead.png">
+        </image>
+    </view>
+</view>

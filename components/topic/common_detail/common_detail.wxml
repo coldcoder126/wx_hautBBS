@@ -1,0 +1,13 @@
+<!-- 展示帖子的完整标题，完整描述，大图（非原图）数据从缓存中取 -->
+<view class='container'>
+  <view class='text-container'>
+    <text class='title'>{{TopicDetail.title}}</text>
+    <text class='description'>{{TopicDetail.content}}</text>
+  </view>
+
+  <view class='image-container'>
+    <image bind:tap="onImage" binderror="onRisk" wx:if="{{image[0]}}" data-index="{{0}}" mode="widthFix" class='image' src="{{image[0]}}" />
+    <image bind:tap="onImage" binderror="onRisk" wx:if="{{image[1]}}" data-index="{{1}}" mode="widthFix" class='image' src="{{image[1]}}" />
+    <image bind:tap="onImage" binderror="onRisk" wx:if="{{image[2]}}" data-index="{{2}}" mode="widthFix" class='image' src="{{image[2]}}" />
+  </view>
+</view>

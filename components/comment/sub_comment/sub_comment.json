@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "comment-compt":"/components/comment/comment/comment",
+    "avatar":"/components/avatar/avatar",
+    "replied":"/components/widget/replied/replied"
+  }
+}

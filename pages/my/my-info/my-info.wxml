@@ -1,0 +1,41 @@
+<!--pages/my/my-info/my-info.wxml-->
+<view  class="container"  >
+    <view class="notice">ID：{{userInfo.id}}</view>
+    <view class="notice">头像</view>
+    <view class="avatar-box" >
+        <image bind:tap="onUpload" class="avatar" src="{{avatarUrl}}" />
+    </view>
+    <form bindsubmit="onSubmit" wx:if="{{!isAdmin}}" >
+    <view class="notice">昵称</view>
+    <view class="input-area" >
+        <input name="nickName" maxlength="14" style="width:100%;" class="nickName" value="{{userInfo.nickName}}" />
+    </view>
+   <view class="notice">个人描述</view>
+    <view class="input-area">
+        <textarea name="description" maxlength="50" class="description" style="width:100%;" value="{{userInfo.description}}"/>
+    </view>
+    <view class="other" bind:tap="onAuthen" >其他认证</view>
+    <button wx:if="{{!isLogin}}" class="button" type="primary" size="default" form-type="submit">修改</button>
+    </form >
+</view>
+<view class="switch" wx:if="{{isLogin}}">
+    administrator<switch checked bindchange="switchChange"/>
+</view>
+<view wx:if="{{isAdmin}}" class="mask" style="background-color:rgba(153,153,153,0.6)" bind:tap="onMask" >
+    <view class="modal" catch:tap="tap" >
+        <form bindsubmit="onAdminLogin" >
+        <view class="notice" >账号</view>
+            <view class="input-area">
+        <input name="account" placeholder="account" />
+            </view>
+        <view class="notice" >密码</view>
+            <view class="input-area">
+        <input name="password" password="{{true}}" placeholder="password" />
+            </view>
+        <view class="btn-box" >
+            <button type="primary" size="mini" form-type="submit">登录</button>
+        </view>
+        
+        </form>
+    </view>
+</view>

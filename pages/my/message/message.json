@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "msg-list":"/components/message/msg-list/msg-list"
+  },
+  "navigationBarTitleText": "私信",
+  "enablePullDownRefresh": true
+}

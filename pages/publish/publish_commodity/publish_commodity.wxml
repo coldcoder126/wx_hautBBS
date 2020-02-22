@@ -1,0 +1,31 @@
+<!-- pages/publish/publish_commodity/publish_commodity.wxml -->
+<view>
+    <form bindsubmit="onSubmit">
+        <view class="notice">物品关键字</view>
+        <view class="input-area">
+            <textarea name="title" class="title" style="font-size:34rpx;  font-weight: 600;"  auto-height />
+        </view>
+        <view class="notice">物品具体描述</view>
+        <view class="input-area">
+            <textarea name="description" class="description" show-confirm-bar="{{true}}"   auto-height />
+        </view>
+        <view class="notice">价格(0-99999)</view>
+        <view class="input-area">
+            <view class="price" >
+            <text class="rmb">￥</text>
+            <input name="price" class="in-price" style="font-size:130%" type="digit" />
+        </view>
+        </view>
+
+        <view class="notice">选择图片</view>
+        <view wx:if="{{canChoose}}" class="sub-container">
+            <image bind:tap="onUpload" class="image" src="images/add.png" />
+        </view>
+        <view wx:if="{{!canChoose}}" class="sub-container">
+            <block wx:for="{{tempFilePaths}}" wx:key="index">
+                <image class="image" mode="aspectFill" src="{{item}}" />
+            </block>
+        </view>
+        <button class="button" type="primary" size="default" form-type="submit">发布</button>
+    </form>
+</view>

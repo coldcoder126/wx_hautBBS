@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "simple-topic":"/components/topic/common_simple/common_simple",
+    "commodity-compt":"/components/topic/commodity/commodity"
+  },
+  "navigationBarTitleText": "我的发布"
+}

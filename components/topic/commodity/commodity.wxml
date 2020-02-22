@@ -1,0 +1,21 @@
+<!-- components/topic/commodity/commodity.wxml 组件 -->
+<view class="container">
+    <slot name="avatar-slot" />
+    <!-- <avatar class="sub-avatar" User="{{Commodity.basicUserInfoVo}}" Time="{{Commodity.createTime}}"></avatar> -->
+    <view  class="content">
+        <view class='image_container' wx:if="{{hasImage}}">
+            <image class="image" binderror="onRisk" src="{{image[0]}}" data-index="{{0}}" bind:tap="onPreview" />
+            <image class="image" binderror="onRisk" src="{{image[1]}}" data-index="{{1}}" bind:tap="onPreview" />
+            <image class="image" binderror="onRisk" src="{{image[2]}}" data-index="{{2}}" bind:tap="onPreview" />
+        </view>
+        <text class="description" bind:tap="onDetail"  decode="true">{{Commodity.description}}</text>
+        <view bind:tap="onDetail"  class="price-container">
+            <text class="price">￥{{Commodity.price}}</text>
+            <slot name="status" />
+            <slot name="icon" />
+            <slot name="commentNum" />
+            <image class="icon" src="../images/comment.png" />
+            <text class="comment-num">{{Commodity.commentNum}}</text>
+        </view>
+    </view>
+</view>

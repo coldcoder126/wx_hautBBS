@@ -1,0 +1,32 @@
+<!-- pages/my/my-notification/notification.wxml -->
+<view class="header">
+    <view bind:tap="onComment1" class="{{selected<3?'selected1':'unselected' }}">收到的评论</view>
+    <!-- <view class="nothing"></view>
+    <view bind:tap="onComment3" class="{{selected==3?'selected3':'unselected' }}">发出的评论</view> -->
+</view>
+<view wx:if="{{loadNum < 3}}" class="container">
+    <view class="choose-box">
+        <view class="{{selected==1?'under-header-selected':'under-header' }}" bind:tap="onComment1">帖子</view>
+            <view class="nothing"></view>
+        <view class="{{selected==2?'under-header-selected':'under-header' }}" bind:tap="onComment2">商品</view>
+    </view>
+    <view class="block-box">
+        <block class="block" wx:if="{{loadNum == 1}}" wx:for="{{topicNoticeList}}" wx:key="id" style="display: block;">
+            <notice bind:tap="onToTopic" data-tid="{{item.topicId}}" Notice="{{item}}"></notice>
+        </block>
+    </view>
+        <view class="block-box">
+    <block class="block" wx:if="{{loadNum == 2}}" wx:for="{{commodityNoticeList}}" wx:key="id" style="display: block;">
+        <notice bind:tap="onToCommodity" data-pid="{{item.topicId}}" Notice="{{item}}"></notice>
+    </block>
+    </view>
+</view>
+<view wx:if="{{loadNum ==3}}" class="contianer">
+    <view class="notOpen" >该功能暂未开放</view>
+    <!-- <view class="under-header" bind:tap="onComment3">帖子</view> -->
+        <view class="block-box">
+    <block class="block" wx:if="{{loadNum == 1}}" wx:for="{{myTopicComments}}" wx:key="id" style="display: block;">
+        <notice Notice="{{item}}"></notice>
+    </block>
+    </view>
+</view>

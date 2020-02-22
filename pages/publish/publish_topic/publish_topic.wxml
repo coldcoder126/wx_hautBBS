@@ -1,0 +1,29 @@
+<!-- pages/publish/publish_topic/publish_topic.wxml -->
+<view>
+    <form bindsubmit="onSubmit">
+                <view class="notice">标题</view>
+        <view wx:if="{{type==1}}" class="input-area">
+            <textarea name="title" style="font-size:34rpx;  font-weight: 500;" auto-height />
+        </view>
+        <view wx:if="{{type==2}}" class="input-area" >
+            <radio-group bindchange="radioChange">
+            <radio class="radio"  value="1" checked="{{true}}" >失物招领  </radio>
+            <radio class="radio"  value="2" checked="" >寻物启事</radio>
+            </radio-group>
+        </view>
+                <view class="notice">内容</view>
+        <view class="input-area">
+            <textarea name="content" class="content"  auto-height  />
+        </view>
+        <view class="notice">选择图片</view>
+    <view wx:if="{{canChoose}}" class="sub-container">
+        <image bind:tap="onUpload" class="image" src="images/add.png" />
+    </view>
+    <view wx:if="{{!canChoose}}" class="sub-container">
+        <block wx:for="{{tempFilePaths}}" wx:key="index">
+            <image class="image" mode="aspectFill" src="{{item}}" />
+        </block>
+    </view>
+    <button class="button" type="primary" size="default" form-type="submit">发布</button>
+    </form>
+</view>

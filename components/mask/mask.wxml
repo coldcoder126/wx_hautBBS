@@ -1,0 +1,2 @@
+<!--components/mask/mask.wxml-->
+<view bind:tap="onBack" class='container'></view>

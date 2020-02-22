@@ -1,0 +1,7 @@
+<!--发布帖子的组件-->
+<view wx:if="{{!isFirst}}" class="container" bind:tap="onPublish" >
+<image class='publish' src="images/publish.png" />
+</view>
+<button wx:if="{{isFirst}}" class="container"  hover-class="button-hover" bindgetphonenumber="getPhoneNumber" open-type="getPhoneNumber">
+<image class='publish' src="images/publish.png" />
+</button>

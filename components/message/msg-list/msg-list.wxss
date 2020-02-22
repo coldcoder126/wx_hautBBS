@@ -1,0 +1,33 @@
+/* components/message/msg-list/msg-list.wxss */
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 110rpx;
+    padding-left: 30rpx;
+    border-block-end: 0.5px solid #ccc;
+}
+
+
+.avatar{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
+
+.content{
+    padding: 0 30rpx;
+    text-overflow: -o-ellipsis-lastline;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+
+}
+
+.status{
+    height: 40rpx;
+    width: 40rpx;
+}

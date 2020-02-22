@@ -1,0 +1,26 @@
+/* components/publish/publish.wxss */
+.container{
+    position: fixed;
+    display:flex;
+    padding:0 !important;
+    border: 0 !important;
+    width: 100rpx;
+    height: 100rpx;
+    margin-left: 30rpx;
+    border-radius: 50%;
+    z-index: 99;
+    bottom:5%;
+    right:10%;
+}
+
+.publish{
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.button-hover{
+
+}
+button:not([size='mini']){
+    width: 100rpx;
+}

@@ -1,0 +1,19 @@
+<!-- pages/my/about/about.wxml -->
+<view class="container">
+  <view bind:tap="onAbout1" class="function">
+    <image class="icon" src="images/protocol.png" />
+    <view class="function-text">协议</view>
+  </view>
+  <text class="context" hidden="{{protocol}}" >{{protocol_txt}}</text>
+  
+  <view bind:tap="onAbout2" class="function">
+    <image class="icon" src="images/feedback.png" />
+        <view class="function-text">反馈</view>
+    <button class="feedback" open-type="feedback" >    </button>
+  </view>
+  <view bind:tap="onAbout3" class="function">
+    <image class="icon" src="images/more.png" />
+    <view class="function-text">更多</view>
+  </view>
+    <text class="context" hidden="{{more}}" >{{more_txt}}</text>
+</view>

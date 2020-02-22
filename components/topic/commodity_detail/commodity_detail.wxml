@@ -1,0 +1,15 @@
+<!-- commodity_detail 组件 -->
+<view class="container">
+    <view class="avatar">
+        <avatar User="{{commodityDetail.basicUserInfoVo}}" Time="{{commodityDetail.createTime}}">
+            <text class="price" slot="comment_num">￥{{commodityDetail.price}}</text>
+        </avatar>
+    </view>
+    <text class="title">{{commodityDetail.title}}</text>
+    <text class="description">{{commodityDetail.description}}</text>
+    <view class='image-container'>
+    <image bind:tap="onImage" binderror="onRisk" wx:if="{{image[0]}}" data-index="{{0}}" mode="widthFix" class='image' src="{{image[0]}}" />
+    <image bind:tap="onImage" binderror="onRisk" wx:if="{{image[1]}}" data-index="{{1}}" mode="widthFix" class='image' src="{{image[1]}}" />
+    <image bind:tap="onImage" binderror="onRisk" wx:if="{{image[2]}}" data-index="{{2}}" mode="widthFix" class='image' src="{{image[2]}}" />
+    </view>
+</view>

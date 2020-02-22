@@ -1,0 +1,15 @@
+<!-- 一个显示头像的复用组件 -->
+<wxs src="../../utils/timeUtil.wxs" module="getTime" />
+<view class='container'>
+  <view class="sub-container">
+    <image bind:tap="onLookUser" binderror="onRisk" class='avatar' style="height:{{length}}rpx;width:{{length}}rpx" src='{{url}}' />
+    <view class="{{sub?'text-container-row':'text-container'}}">
+      <text class='nickName' bind:tap="onLookUser" >{{User.nickName}}</text>
+      <text class='time'>{{getTime.Time(Time)}}</text>
+    </view>
+  </view>
+  <view class="slot">
+    <slot name="comment_icon" />
+    <slot name="comment_num" />
+  </view>
+</view>

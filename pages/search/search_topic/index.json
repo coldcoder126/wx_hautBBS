@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "search-compt":"/components/search/search",
+    "simple-topic":"/components/topic/common_simple/common_simple"
+  },
+  "navigationBarTitleText": "搜索帖子"
+}

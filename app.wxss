@@ -1,0 +1,17 @@
+/**app.wxss
+page{}内的为全局默认样式，只有font和color可以被继承。
+**/
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}  */
+
+page{
+  font-family: "PingFangSC-Thin";
+  font-size: 32rpx;
+}

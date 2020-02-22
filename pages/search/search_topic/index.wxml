@@ -1,0 +1,17 @@
+<!-- 帖子的搜索页面 -->
+<search-compt bind:confirm="onConfirm" bind:delete="onDelete" bind:delHistory="delHistory" historyWords="{{historyWords}}" >
+    <view slot="picker" class="section">
+  <view class="section__title">在此分类下搜索</view>
+  <picker bindchange="bindPickerChange" value="{{typeIndex}}" range="{{type}}">
+    <view class="picker">
+    {{type[typeIndex]}}
+    </view>
+  </picker>
+</view>
+</search-compt>
+
+<view class="nothing"></view>
+<view class="header" wx:if="{{numFound>=0}}" >找到相关内容{{numFound}}条</view>
+<block wx:for="{{topicList}}" wx:key="id" style="display: block;">
+<simple-topic SimpleTopic="{{item}}" />
+</block>

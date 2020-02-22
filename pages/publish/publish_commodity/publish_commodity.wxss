@@ -1,0 +1,67 @@
+/* pages/publish/publish_commodity/publish_commodity.wxss */
+page{
+    background-color: #f8f8f8
+}
+
+.container{
+
+}
+.title{
+    min-height: 40rpx;
+}
+.description{
+    min-height: 86rpx;
+}
+
+.notice{
+    margin: 6rpx 20rpx;
+    font-size: 28rpx;
+    color:#999999;
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.rmb{
+    font-size: 62rpx;
+    font-weight: 400;
+    color: #F44336;
+}
+
+.in-price{
+    height: 2rem;
+    min-height: 1.8rem;
+}
+.sub-container{
+    display: flex;
+    flex-direction: row;
+    width: 500rpx;
+    height: 160rpx;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.input-area{
+
+    padding: 6rpx 30rpx;
+    background-color: #FFF
+}
+
+
+.image{
+    width: 150rpx;
+    height: 150rpx;
+    margin: 0 10rpx;
+    border-radius: 20rpx;   
+}
+
+.button{
+margin-top: 30px;
+  width: 80%;
+  border-radius: 98rpx;
+  margin-bottom: 100rpx;
+}

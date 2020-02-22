@@ -1,0 +1,19 @@
+<!-- pages/topic/commodity/commodity.wxml -->
+
+<view class="container" bind:onSearching="onSearching" >
+      <navi-compt >
+    <text class="module" slot="module1">闲置物品</text>
+  </navi-compt>
+    <block wx:for="{{commodityList}}" wx:key="id" style="display: block;">
+        <commodity-compt Commodity="{{item}}"  >
+          <!-- <text slot="avatar-slot" >123 </text> -->
+          
+          <avatar class="avatar" slot="avatar-slot" User="{{item.basicUserInfoVo}}" Time="{{item.createTime}}" >
+      <image wx:if="{{isAdmin}}" slot="comment_icon" class="delete" bind:tap="onDelete" src="../images/delete.png" data-id="{{item.id}}" data-title="{{item.description}}" data-uid="{{item.basicUserInfoVo.uid}}" />
+          </avatar>
+        </commodity-compt>
+    </block>
+    <view wx:if="{{hasStorage}}" class="notice">没有内容？下拉试试↓</view>
+    <publish-compt bind:publish="onPublish" />
+</view>
+<search-compt bind:cancel="onCancel" wx:if="{{searching}}" />

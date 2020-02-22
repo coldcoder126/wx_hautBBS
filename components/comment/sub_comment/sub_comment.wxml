@@ -1,0 +1,13 @@
+<!-- 子评论模块，在子评论中引用主评论模块实现 -->
+<block class="container">
+    <block class="main-box" wx:for="{{ChildComments}}" wx:key="id" style="display: block;">
+        <view class="avatar-box">
+            <avatar class="avatar1" User="{{item.fromUser}}" Time="{{item.createTime}}" Sub="{{true}}"  />
+            <!-- 如果回复的是层主，则不显示被回复人。判断条件为toUser为层主且level为1 -->
+        </view>
+                    <view wx:if="{{!(item.toUser.uid==ToUid&&Level==1)}}" class="text">回复
+                <replied User="{{item.toUser}}"></replied>
+                ：</view>
+        <comment-compt bind:reply="onReply" Comment="{{item}}" />
+    </block>
+</block>

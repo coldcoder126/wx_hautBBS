@@ -1,0 +1,8 @@
+<!--components/message/msg-navi/msg-navi.wxml-->
+<view class="container">
+    <view class="back-box">
+        <image class="back" src="images/back.png" />
+    </view>
+    <image class="navi-avatar" src="{{AvatarUrl}}" />
+    <view class="nothing"></view>
+</view>

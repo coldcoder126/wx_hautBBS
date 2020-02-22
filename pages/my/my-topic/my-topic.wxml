@@ -1,0 +1,30 @@
+<view class="choose-box">
+    <view bind:tap="onFirst" class="{{selected==1?'selected1':'unselected' }}" >我的帖子</view>
+    <view class="nothing"></view>
+    <view bind:tap="onSecond" class="{{selected==2?'selected2':'unselected' }}" >我的商品</view>
+</view>
+<view wx:if="{{page<2}}" class="container">
+    <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{simpleTopicList}}" wx:key="index">
+        <view class="content">
+            <simple-topic SimpleTopic="{{item}}" />
+        </view>
+        <view class="del" catchtap="onDelete" data-id="{{item.id}}" data-index="{{index}}">
+            <view class="edit-text">删除</view>
+        </view>
+    </view>
+</view>
+<view wx:if="{{page>1}}" class="container">
+    <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart2" bindtouchmove="touchmove2" wx:for="{{commodityList}}" wx:key="index">
+        <view class="content">
+            <commodity-compt Commodity="{{item}}" />
+        </view>
+        <view class="set-box">
+            <view class="delit" catchtap="onDelete2" data-id="{{item.id}}" data-index="{{index}}">
+                <view class="edit-text">删除</view>
+            </view>
+            <view class="sale" catchtap="onSaled" data-id="{{item.id}}" data-index="{{index}}" >
+            <view class="edit-text">已售</view>
+            </view>
+        </view>
+    </view>
+</view>

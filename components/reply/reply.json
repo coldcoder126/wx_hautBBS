@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "sned-compt":"/components/widget/send/send"
+  }
+}

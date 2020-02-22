@@ -1,0 +1,9 @@
+<!--呈现出搜索结果中的简单帖子，只有标题和内容-->
+<wxs src="../../../utils/timeUtil.wxs" module="getTime" />
+<view bind:tap="onDetail" class="container">
+    <view class="sub-container" hover-class="sub-container-after">
+    <text class="title" >{{SimpleTopic.title}}</text>
+    <text class="content" >{{SimpleTopic.content}}</text>
+    <text class="time">{{getTime.Time(SimpleTopic.createTime)}}</text>
+    </view>
+</view>

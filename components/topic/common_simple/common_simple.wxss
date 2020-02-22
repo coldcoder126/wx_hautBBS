@@ -1,0 +1,55 @@
+/* components/topic/common_simple/common_simple.wxss */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-container{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:20rpx 6rpx;
+    box-shadow: 2px 4px 3px #e3e3e3;
+    border-radius:30rpx
+}
+
+.title{
+    width: 95%;
+    text-indent: 50rpx;
+    margin-bottom: 8rpx;
+    margin-top: 10rpx;
+    font-size: 30rpx;
+    font-weight: 600;
+    color: #2f2f2f;
+    text-overflow: -o-ellipsis-lastline;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.content{
+    width: 95%;
+    text-indent: 50rpx;
+    text-overflow: -o-ellipsis-lastline;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin:6rpx;
+    padding: 0 6rpx;
+}
+.time{
+    width: 92%;
+    text-indent: 50rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    margin:6rpx;
+}
+
+

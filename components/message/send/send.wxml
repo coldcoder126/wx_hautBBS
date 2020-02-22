@@ -1,0 +1,13 @@
+<!-- components/message/send/send.wxml -->
+<wxs src="../../../utils/timeUtil.wxs" module="getTime" />
+<view class="container">
+    <view class="sub-container">
+    <view wx:if="{{Message.haveRead==0}}" class="status">未读</view>
+        <view class="info-box">
+            <view class="message">{{Message.content}}</view>
+            <view class="time">{{getTime.Dates(Message.createTime)}}</view>
+            
+        </view>
+        <view class="angle"></view>
+    </view>
+</view>

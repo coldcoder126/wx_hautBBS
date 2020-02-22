@@ -1,0 +1,8 @@
+<!-- components/notice/notice.wxml -->
+<view class="container">
+    <view class="header">
+    <avatar class="avatar" User="{{Notice.fromUser}}" ></avatar>
+    <image class="status" src="{{Notice.haveRead == false?'images/notRead.png':''}}" />
+    </view>
+    <view class="content">{{Notice.content}}</view>
+</view>

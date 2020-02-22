@@ -1,0 +1,33 @@
+/* pages/my/message/message.wxss */
+
+.del {
+    background-color: orangered;
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    -webkit-transform: translateX(90px);
+    transform: translateX(90px);
+    -webkit-transition: all 0.1s;
+    transition: all 0.3s;
+    }
+    .touch-move-active .content,
+    .touch-move-active .del {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);    
+    }
+
+    .edit-text{
+        font-weight: 600;
+    }
+
+    .touch-item {
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom:1px solid #ccc;
+        width: 100%;
+        overflow: hidden
+        }

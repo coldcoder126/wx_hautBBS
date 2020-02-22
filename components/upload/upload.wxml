@@ -1,0 +1,11 @@
+<!--上传图片组件-->
+<view class="container">
+    <view wx:if="{{canChoose}}" class="sub-container" >
+    <image bind:tap="onUpload" class="image" src="image/add.png" />
+    </view>
+    <view wx:if="{{!canChoose}}"  class="sub-container">
+        <block wx:for="{{tempImgList}}" wx:key="index">
+            <image  class="image" src="{{item}}" />
+        </block>
+    </view>
+</view>

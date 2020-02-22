@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "avatar-compt":"/components/avatar/avatar",
+    "content-compt":"/components/topic/Common/common",
+    "navi-compt":"/components/navi/index",
+    "search-compt":"/components/search/search",
+    "publish-compt":"/components/widget/publish/publish",
+    "act-compt":"/components/topic/activity/activity"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+
+  "backgroundTextStyle": "dark"
+}

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "avatar-compt":"/components/avatar/avatar",
+    "detail-compt":"/components/topic/commodity_detail/commodity_detail",
+    "comment-compt":"/components/comment/comment/comment",
+    "reply-compt":"/components/reply/reply"
+  },
+  "enablePullDownRefresh": true
+}

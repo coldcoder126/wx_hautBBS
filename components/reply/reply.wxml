@@ -1,0 +1,15 @@
+<!-- components/reply/reply.wxml -->
+<view wx:if="{{focused}}" bind:tap="onBack" class="mask"></view>
+<view class="container">
+
+        <form class="form" bindsubmit="onReply" >
+            <view class="inform">
+        <!-- <image class="avatar" src="{{avatarUrl}}" /> -->
+        <input name="reply" class="input" style="width:560rpx" value="{{Value}}" focus="{{focused}}"  placeholder="  回复：{{result[1]}}" disabled="{{disabled}}" />
+        <!-- <sned-compt bind:sending="onSend"></sned-compt> -->
+        <button class="send" form-type="submit" >回复</button>
+        <!-- <view class="huifu" >回复</view> -->
+        </view>
+        </form>
+
+</view>

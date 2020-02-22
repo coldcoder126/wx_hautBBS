@@ -1,0 +1,30 @@
+/* components/comment/sub_comment/sub_comment.wxss */
+.conatainer{
+    width: 90%;
+    background-color: #E7E7E7;
+}
+
+.avatar-box{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.text{
+    font-weight: 300;
+    font-size: 28rpx;
+    margin-left:80rpx;
+}
+
+.avatar1{
+    display: flex;
+}
+.avatar2{
+    display: flex;
+}
+
+
+

@@ -1,0 +1,37 @@
+/* pages/publish/publish_activity/publish_activity.wxss */
+page{
+    background-color: #f8f8f8
+}
+
+.notice{
+    margin: 6rpx 20rpx;
+    font-size: 28rpx;
+    color:#999999;
+}
+
+.title{
+    min-height: 40rpx;
+}
+.description{
+    min-height: 86rpx;
+}
+
+.input-area{
+
+    padding: 6rpx 30rpx;
+    background-color: #FFF
+}
+
+.image{
+    width: 150rpx;
+    height: 150rpx;
+    margin: 0 10rpx;
+    border-radius: 20rpx;   
+}
+
+.button{
+margin-top: 30px;
+  width: 80%;
+  border-radius: 98rpx;
+  margin-bottom: 100rpx;
+}

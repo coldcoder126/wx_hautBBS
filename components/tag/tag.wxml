@@ -1,0 +1,4 @@
+<!--components/tag/tag.wxml-->
+<view class='container' bindtap='onTap' >
+  <text>{{text}}</text>
+</view>

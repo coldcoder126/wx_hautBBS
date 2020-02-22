@@ -1,0 +1,13 @@
+<!--pages/topic_detail/commodity_detail/commodity_detail.wxml-->
+<view class="container">
+    <detail-compt class="detail-container" commodityDetail="{{commodityDetail}}" ></detail-compt>
+    <view class="separator"> 评论区 </view>
+    <block wx:for="{{commentList}}" wx:key="id" style="display: block;">
+        <avatar-compt User="{{item.fromUser}}" Time="{{item.createTime}}" >
+            <text bind:tap="onOwner" class="floor" slot="comment_num">{{index + 1}}F</text>
+        </avatar-compt>
+        <comment-compt bind:reply="onReply" bind:owner="onOwner" Comment="{{item}}" ></comment-compt>
+    </block>
+    <view class="noMore" >没有更多评论</view>
+    <reply-compt bind:sending="onSending" bind:back="onOwner" result="{{result}}" value="{{inputValue}}"  ></reply-compt>
+</view>

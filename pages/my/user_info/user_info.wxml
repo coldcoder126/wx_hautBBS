@@ -1,0 +1,39 @@
+<!-- 查看他人信息 -->
+<wxs src="../../../utils/genderUtil.wxs" module="getGender" />
+<view class="container">
+    <image class="bg-img" mode="aspectFill" src="{{bgImgUrl}}" />
+    <image wx:if="{{!isMe}}" bind:tap="onMessage" class="message" src="images/message.png" />
+    <view class="main">
+        <image class="avatar" src="{{url}}" />
+        <image class="gender" src="{{getGender.Gender(userInfo.gender)}}" />
+        <view class="title-box">
+            <view class="title">{{userInfo.nickName}}</view>
+            <text class="separator" wx:if="{{userInfo.stuid}}">|</text>
+            <image wx:if="{{userInfo.stuid}}" class="stu-img"  src="images/xuesheng.png" />
+            <!-- 1.如果stuid是12位则为学生，否则为教工 -->
+        </view>
+    </view>
+    <view wx:if="{{isMe}}" class="changeBGI"  bind:tap="onChangeBGI">更换背景
+    <image class="icon" src="images/bg_icon.png" />
+    </view>
+</view>
+<view class="description-box">
+    <view class="authenName" wx:if="{{userInfo.authenName}}">认证：{{userInfo.authenName}}</view>
+    <view class="description" wx:if="{{userInfo.description}}">简介：{{userInfo.description}}</view>
+    <view class="description" wx:if="{{isAdmin}}">ID:{{uid}}</view>
+</view>
+<view class="choose-box">
+    <view bind:tap="onTopic" class="{{selected==1?'selected1':'unselected' }}">Ta的帖子</view>
+    <view class="nothing"></view>
+    <view bind:tap="onCommodity" class="{{selected==2?'selected2':'unselected' }}">Ta的物品</view>
+</view>
+<view wx:if="{{selected==1}}" class="showArea">
+    <block wx:for="{{topicList}}" wx:key="id" style="display: block;">
+        <simple-topic SimpleTopic="{{item}}"></simple-topic>
+    </block>
+</view>
+<view wx:if="{{selected==2}}" class="showArea">
+    <block wx:for="{{commodityList}}" wx:key="id" style="display: block;">
+        <commodity-compt Commodity="{{item}}" />
+    </block>
+</view>

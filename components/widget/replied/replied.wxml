@@ -1,0 +1,2 @@
+<!--components/widget/replied/replied.wxml被回复的人，显示其昵称并可以点击查看详情-->
+<text class="name" bind:tap="onLookUser" > @{{nickName}} </text>

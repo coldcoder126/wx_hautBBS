@@ -1,0 +1,59 @@
+/* components/message/send/send.wxss */
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding:20rpx 0;
+}
+
+.sub-container{
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+max-width: 60%;
+}
+
+.info-box{
+    border-radius: 20rpx;
+    display: flex;
+    flex-direction: column;
+    background-color: #4ECE7A;
+}
+
+.message{
+    display: flex;
+    margin:4rpx 20rpx;
+}
+
+.angle{
+    width:35rpx;
+    height: 35rpx;
+    transform:rotate(45deg);
+    background-color: #4ECE7A;
+    position: relative;
+    right: 20rpx;
+    z-index: -1;
+
+}
+
+.time{
+    height: 50rpx;
+    margin-left: 20rpx;
+    font-size: 26rpx;
+    }
+
+.status{
+    width: 80rpx;
+    height: 40rpx;
+    background-color: brown;
+    border-radius:12rpx;
+    margin:0 6rpx;
+    font-size: 26rpx;
+    font-weight: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }

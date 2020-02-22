@@ -1,0 +1,70 @@
+var Time = function(time){  
+    if(!time){
+        return
+    }else if(time.length>13){
+        time = getDate(time).getTime()
+    }
+    var now = getDate()
+
+
+
+    var date = getDate(parseInt(time))
+    var _year = date.getFullYear()
+    var _month = date.getMonth()+1
+    var _day = date.getDate()
+
+    var gap = now-date
+
+    if(gap<10000){
+        return "刚刚"
+    }else if(gap<60000){
+        return Math.floor(gap/1000)+"秒前"
+    }else if(gap<3600000){
+        return Math.floor(gap/1000/60)+"分钟前"
+    }else if(gap<86400000){
+        return Math.floor(gap/1000/60/60)+"小时前"
+    }else if(gap<2592000000){
+        return Math.floor(gap/1000/60/60/24)+"天前"
+    }else {
+        return _year+"-"+_month+"-"+_day
+    }
+}
+
+var Dates = function(time){  
+    if(!time){
+        return
+    }
+    var now = getDate()
+    var year = now.getFullYear()
+    var month = now.getMonth()+1
+    var day = now.getDate()
+
+
+    var date = getDate(parseInt(time))
+    var _year = date.getFullYear()
+    var _month = date.getMonth()+1
+    var _day = date.getDate()
+    var _hour = date.getHours()
+    var _minutes = date.getMinutes()
+
+    if(year==_year&&month==_month&&day==_day){
+        if(_hour<10){_hour = '0'+_hour}
+        if(_minutes<10){_minutes = '0'+_minutes}
+        return _hour+":"+_minutes
+    }else if(year==_year){ 
+        if(_month<10){_month = '0'+_month}
+        if(_day<10){_day = '0'+_day}
+        if(_hour<10){_hour = '0'+_hour}
+        if(_minutes<10){_minutes = '0'+_minutes}
+        return _month+"-"+_day+" "+_hour+":"+_minutes
+    }else{
+        if(_month<10){_month = '0'+_month}
+        if(_day<10){_day = '0'+_day}
+        return year+"-"+_month+"-"+_day
+    }
+}
+
+module.exports = {
+    Time:Time,
+    Dates:Dates
+}

@@ -1,0 +1,16 @@
+var Gender = function (gender) {
+    if(!gender){
+        return
+    }
+    else if (gender == 1) {
+        return "images/boy.png"
+    } else if (gender == 2) {
+        return "images/girl.png"
+    } else {
+        return "images/unknow.png"
+    }
+
+}
+module.exports = {
+    Gender:Gender
+}

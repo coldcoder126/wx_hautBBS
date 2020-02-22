@@ -1,0 +1,13 @@
+<!-- components/topic/activity/activity.wxml -->
+<view class="container">
+    <view class="image">
+        <image class="img" binderror="onRisk" mode="aspectFit" src="{{image}}" bind:tap="previewImg" />
+    </view>
+    <view bind:tap="onDetail" class="text">
+        <view class="title">{{title}}</view>
+        <view class="time">时间：{{date}} {{time}}</view>
+        <view class="place">地点：{{place}}</view>
+        <view class="sponsor">主办方：{{sponsor}}</view>
+        <view class="description">详情：{{description}}</view>
+    </view>
+</view>

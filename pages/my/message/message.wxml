@@ -1,0 +1,10 @@
+<!-- pages/my/message/message.wxml -->
+<view class="list-container">
+        <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{messageUserList}}" wx:key="index">
+            <msg-list bind:tap="onChat" MsgList="{{item}}" data-fid="{{item.fromUid}}" data-index="{{index}}"></msg-list>
+            <view class="del" catchtap="onDelete" data-id="{{item.id}}" data-index="{{index}}">
+                <view class="edit-text">删除</view>
+            </view>
+        </view>
+        <!-- <notice bind:tap="onToCommodity" data-pid="{{item.topicId}}" Notice="{{item}}"></notice> -->
+</view>

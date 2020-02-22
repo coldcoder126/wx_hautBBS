@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "search-compt":"/components/search/search",
+    "commodity-compt":"/components/topic/commodity/commodity",
+    "avatar":"/components/avatar/avatar"
+  },
+  "navigationBarTitleText": "搜索商品"
+}

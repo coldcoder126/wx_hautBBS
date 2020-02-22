@@ -1,0 +1,25 @@
+<!--pages/topic_detail/activity_detail/activity_detail.wxml-->
+<wxs src="../../../utils/timeUtil.wxs" module="getTime" />
+<view class="container">
+    <view class="head">
+        <image bind:tap="previewImg" class="image" mode="aspectFit" src="{{image}}" />
+        <view class="title">{{title}}</view>
+    </view>         
+
+    <view class="headline">简介</view>
+    <view class="body">
+        <view class="text">时间：{{date}}  {{time}}</view>
+        <view class="text">地点：{{place}}</view>
+        <view class="text">主办方：{{sponsor}}</view>
+    </view>
+
+        <view class="headline">活动详情</view>
+    <view class="body">
+        <view class="detail">{{description}}</view>
+    </view>
+    <view class="share-box">
+    <share></share>
+    </view>
+    <view class="publish-info">{{authenName}} 发布于：{{getTime.Dates(publishTime)}}</view>
+
+</view>

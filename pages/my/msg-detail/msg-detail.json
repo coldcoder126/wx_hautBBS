@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "receive-compt":"/components/message/receive/receive",
+    "send-compt":"/components/message/send/send",
+    "reply":"/components/reply/reply"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "私信"
+}

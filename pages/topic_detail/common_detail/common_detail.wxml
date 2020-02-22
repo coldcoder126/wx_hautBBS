@@ -1,0 +1,19 @@
+<!-- pages/topic_detail/common_detail/common_detail.wxml -->
+<view class="container">
+    <view class="header">
+        <avatar-compt class="avatar" User="{{topicDetail.basicUser}}" Time="{{topicDetail.createTime}}">
+
+        </avatar-compt>
+
+    </view>
+    <topic-detail TopicDetail="{{topicDetail}}" />
+    <view class="separator">评论区</view>
+    <block wx:for="{{commentList}}" wx:key="id" style="display: block;">
+        <avatar-compt User="{{item.fromUser}}" Time="{{item.createTime}}">
+            <text class="floor" slot="comment_num">{{index + 1}}F</text>
+        </avatar-compt>
+        <comment-compt class="comment" bind:reply="onReply" bind:owner="onOwner" Comment="{{item}}"></comment-compt>
+    </block>
+    <view class="noMore">没有更多评论</view>
+    <reply-compt bind:sending="onSending" bind:back="onOwner" result="{{result}}" value="{{inputValue}}" topicId="{{topicDetail.id}}"></reply-compt>
+</view>

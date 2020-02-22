@@ -1,0 +1,50 @@
+/* pages/topic_detail/common_detail/common_detail.wxss */
+page{
+    background-color: #f8f8f8
+}
+.container{
+    width: 100%;
+    position: absolute;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+}
+
+.avatar{
+    width: 100%;
+}
+
+
+
+
+.separator{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 6rpx 20rpx;
+    font-size: 28rpx;
+    color:#999999;
+    
+}
+
+.floor{
+    position: absolute;
+    right: 62rpx;
+}
+.comment{
+    border-bottom: 0.5px solid #999;
+}
+
+.noMore{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:20rpx 0;
+    margin-bottom: 100rpx;
+    font-size: 32rpx;
+    color:#999999;
+}

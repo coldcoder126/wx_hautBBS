@@ -1,0 +1,39 @@
+/* components/notice/notice.wxss */
+.container{
+    display: flex;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 20rpx;
+    border-bottom:0.5px #c2c2c2 solid;
+}
+
+.avatar{
+    width: 100%;
+}
+.header{
+    display: flex;
+    width: 100%;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content{
+    width: 90%;
+    text-indent: 50rpx;
+    text-overflow: -o-ellipsis-lastline;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    padding: 20rpx 0;
+}
+
+.status{
+    height: 40rpx;
+    width: 40rpx;
+}

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "commodity-compt":"/components/topic/commodity/commodity",
+    "publish-compt":"/components/widget/publish/publish",
+    "navi-compt":"/components/navi/index",
+    "avatar":"/components/avatar/avatar"
+  },
+  "enablePullDownRefresh": true
+}

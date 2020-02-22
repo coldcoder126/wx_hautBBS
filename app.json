@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/topic/Common/common",
+    "pages/my/my/my",
+    "pages/topic_detail/common_detail/common_detail",
+    "pages/my/user_info/user_info",
+    "pages/search/search_topic/index",
+    "pages/search/search_commodity/index",
+    "pages/publish/publish_topic/publish_topic",
+    "pages/topic/commodity/commodity",
+    "pages/topic_detail/commodity_detail/commodity_detail",
+    "pages/publish/publish_commodity/publish_commodity",
+    "pages/my/my-info/my-info",
+    "pages/my/my-topic/my-topic",
+    "pages/my/my-notification/notification",
+    "pages/my/message/message",
+    "pages/my/msg-detail/msg-detail",
+    "pages/publish/publish_activity/publish_activity",
+    "pages/topic_detail/activity_detail/activity_detail",
+    "pages/my/about/about",
+    "pages/my/authen/authen"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "莲花街100号",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/topic/Common/common",
+        "text": "帖子",
+        "iconPath": "images/icon/forum.png",
+        "selectedIconPath": "images/icon/_forum.png"
+      },
+      {
+        "pagePath": "pages/topic/commodity/commodity",
+        "text": "市集",
+        "iconPath": "images/icon/market.png",
+        "selectedIconPath": "images/icon/_market.png"
+      },
+      {
+        "pagePath": "pages/my/my/my",
+        "text": "我的",
+        "iconPath": "images/icon/my.png",
+        "selectedIconPath": "images/icon/_my.png"
+      }
+    ],
+    "selectedColor": "#00758F"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json",
+  "style":"v2"
+}

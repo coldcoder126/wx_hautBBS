@@ -1,0 +1,14 @@
+<!-- 一个显示帖子概览的组件 -->
+
+
+<view class='container'>
+  <view bindtap='onTap' class='text_container'>
+    <text class='title'>{{topic.title}}</text>
+    <text class='description'>{{topic.content}}</text>
+  </view>
+  <view class='image_container' wx:if="{{hasImage}}">
+    <image class="image" binderror="onRisk" src="{{image[0]}}" data-index="{{0}}" bind:tap="onPreview" />
+    <image class="image" binderror="onRisk" src="{{image[1]}}" data-index="{{1}}" bind:tap="onPreview" />
+    <image class="image" binderror="onRisk" src="{{image[2]}}" data-index="{{2}}" bind:tap="onPreview" />
+  </view>
+</view>

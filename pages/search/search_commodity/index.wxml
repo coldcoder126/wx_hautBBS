@@ -1,0 +1,9 @@
+<!--商品的搜索页面-->
+<search-compt bind:confirm="onConfirm" bind:delete="onDelete" bind:delHistory="delHistory" historyWords="{{historyWords}}" />
+<view class="container" wx:if="{{numFound>=0}}" >
+<view class="header" wx:if="{{numFound>=0}}">找到相关内容{{numFound}}条</view>
+<block wx:for="{{commodityList}}" wx:key="id" style="display: block;">
+    <commodity-compt Commodity="{{item}}" >
+    </commodity-compt>
+</block>
+</view>

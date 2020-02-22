@@ -1,0 +1,48 @@
+/* pages/publish/publish_topic/publish_topic.wxss */
+page{
+    background-color: #f8f8f8
+}
+.container{
+
+}
+.title{
+    min-height: 1rem;
+}
+
+.content{
+    min-height: 3rem;
+}
+.notice{
+    margin: 6rpx 20rpx;
+    font-size: 28rpx;
+    color:#999999;
+}
+
+.input-area{
+
+    padding: 6rpx 30rpx;
+    background-color: #FFF
+}
+
+.sub-container{
+    display: flex;
+    flex-direction: row;
+    width: 500rpx;
+    height: 160rpx;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.button{
+    margin-top: 30px;
+      width: 80%;
+      border-radius: 98rpx;
+      margin-bottom: 100rpx;
+    }
+
+.image{
+    width: 150rpx;
+    height: 150rpx;
+    margin: 0 10rpx;
+    border-radius: 20rpx;   
+}

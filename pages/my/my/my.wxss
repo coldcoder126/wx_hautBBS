@@ -1,0 +1,141 @@
+page{
+  background-color: #f8f8f8
+}
+
+.info-container{
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+height: 350rpx;
+background-color: #fff;
+margin-bottom: 6rpx;
+}
+
+.message-box{
+  height: 150rpx;
+}
+
+.message{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 10rpx;
+
+}
+
+.userinfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  bottom: 30rpx;
+  margin-left: 50rpx;
+}
+
+.avatar{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+
+}
+
+.text-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100rpx;
+  position: relative;
+  margin: 0 16rpx;
+}
+
+.nickname{
+  font-size: 36rpx;
+  font-weight: 600;
+  width:350rpx;
+  text-overflow: -o-ellipsis-lastline;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+
+}
+
+.score-gender{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.score{
+  font-size: 24rpx;
+
+}
+
+.gender{
+  height: 30rpx;
+  width: 30rpx;
+  margin: 4rpx;
+}
+
+.sign-container{
+display: flex;
+height: 100rpx;
+width: 100rpx;
+justify-content: center;
+align-items: center;
+}
+
+.sign{
+  height: 70rpx;
+  width: 70rpx;
+  left: 250rpx;
+}
+
+.description{
+  font-size: 30rpx;
+  font-weight: 500;
+  margin: 0 50rpx;
+
+}
+
+.function-area{
+  display: flex;
+  flex-direction: column;
+}
+
+.function{
+padding: 24rpx;
+display: flex;
+align-items: center;
+margin: 6rpx;
+background-color: #FFF;
+}
+
+.function-text{
+  flex: 1;
+  font-weight: 500;
+}
+
+.in{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.login{
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.button{
+  margin-top: 30px;
+  width: 80%;
+  border-radius: 98rpx;
+  margin-bottom: 100rpx;
+  }

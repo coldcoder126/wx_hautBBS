@@ -1,0 +1,4 @@
+<!--components/widget/share/share.wxml-->
+    <button class="share" open-type="share" plain="{{true}}">
+        <image class="img" src="/images/icon/share.png" />
+    </button>

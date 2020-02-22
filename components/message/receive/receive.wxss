@@ -1,0 +1,46 @@
+/* components/message/receive/receive.wxss */
+.container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 60%;
+    margin:20rpx 0;
+    padding:20rpx 14rpx;
+
+}
+
+.angle{
+    width:35rpx;
+    height: 35rpx;
+    transform:rotate(45deg);
+    background-color: #E5E5EA;
+    position: relative;
+    left: 16rpx;
+    z-index: -1;
+
+}
+
+.info-box{
+    border-radius: 20rpx;
+    background-color: #E5E5EA;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.message{
+    display: flex;
+    margin:4rpx 20rpx;
+
+}
+.time{
+height: 50rpx;
+width: 300rpx;
+margin-left: 20rpx;
+font-size: 26rpx;
+}
+
+

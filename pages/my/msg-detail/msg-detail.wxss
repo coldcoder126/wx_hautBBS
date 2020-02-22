@@ -1,0 +1,86 @@
+/* pages/my/msg-detail/msg-detail.wxss */
+page{
+    background-color: #f8f8f8
+  }
+.container{
+    position: relative;
+    top: 100rpx;
+}
+
+.input-box{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.header{
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    padding-top: 6rpx;
+    box-shadow: 1px -1px 1px #e3e3e3;
+    background-color: #f8f8f8;
+    top: 0;
+    z-index: 10;
+}
+
+.back{
+    width: 60rpx;
+    height: 60rpx;
+    
+}
+
+.avatar{
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+}
+.name{
+    font-size: 26rpx;
+    font-size: 500; 
+}
+.block{
+    width: 100%;
+    position: relative;
+}
+
+.nothing{
+    height: 100rpx;
+}
+
+.input-area{
+display: flex;
+justify-content: flex-start;
+align-items: center;
+width: 100%;
+height: 80rpx;
+background-color: #F2F2F2;
+position: fixed;
+bottom: 0;
+padding-left:40rpx;
+
+}
+
+
+.myAvatar{
+    width:66rpx;
+    height:66rpx;
+    border-radius:50%;
+    margin:0 10rpx 20rpx;
+    
+}
+
+.input{
+    display: inline-block;
+    margin: 6rpx 0;
+    height: 28px;
+    width:470rpx;
+    font-size: 14px;
+    border: 1px solid #999;
+    border-radius: 15px;
+}
+

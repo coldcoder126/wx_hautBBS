@@ -1,0 +1,4 @@
+/* components/widget/replied/replied.wxss */
+.name{
+    color: #01AAED;
+}

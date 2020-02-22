@@ -1,0 +1,30 @@
+/* pages/topic/commodity/commodity.wxss */
+.container {
+    margin-top: 70rpx;
+  }
+
+.module{
+  padding: 5rpx;
+  border-bottom: 3px #00758F solid;
+  margin-bottom:-1px;
+  transition-duration: 0.5s;
+  color:#00758F;
+}
+.avatar{
+  width: 100%;
+}
+.notice{
+  color: #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+  font-weight: 300;
+
+}
+
+.delete{
+  width: 50rpx;
+  height: 50rpx;
+  
+}

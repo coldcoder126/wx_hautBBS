@@ -1,0 +1,148 @@
+/* pages/my/user_info/user_info.wxss */
+page{
+    background-color: #f8f8f8
+}
+
+.container{
+    position: relative;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 350rpx;
+    align-items: center;
+    justify-content: center;   
+}
+
+.bg-img{
+    width: 100%;
+    position: absolute;
+    height: 350rpx;
+    z-index: -1;
+}
+
+.main{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.avatar-box{
+    width: 120rpx;
+    height: 120rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20rpx;
+}
+
+.message{
+    width: 90rpx;
+    height: 90rpx;
+    position: absolute;
+    right: 30rpx;
+    top: 30rpx;
+}
+
+.avatar{
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+}
+
+.gender{
+    width: 30rpx;
+    height: 30rpx;
+    position: relative;
+    bottom: 20rpx;
+}
+
+.title-box{
+
+    padding: 0 30rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title{
+
+}
+
+.separator{
+    margin: 0 10rpx;
+}
+
+.student{
+    display: flex;
+}
+.stu-img{
+    width: 66rpx;
+    height: 44rpx;
+}
+
+.description-box{
+    display: flex;
+    flex-direction: column;
+    padding: 0 30rpx;
+}
+
+.description{
+font-size: 28rpx;
+background-color: #f8f8f8;
+}
+
+.authenName{
+    font-size: 28rpx;
+    background-color: #f8f8f8;
+}
+
+.choose-box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    height: 77rpx;
+}
+
+
+.nothing{
+    width: 30rpx;
+}
+.selected1{
+    border-bottom: 3px #00758F solid;
+  }
+  
+  .selected2{
+    border-bottom: 3px #00758F solid;
+  }
+  
+  .unselected{
+    border-bottom: 3px #f8f8f8 solid;
+  }
+
+  .showArea{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-direction: column
+
+  }
+
+  .changeBGI{
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      bottom: 20rpx;
+      right: 20rpx;
+      font-size: 28rpx;
+  }
+
+  .icon{
+      width:40rpx;
+      height: 40rpx;
+  }

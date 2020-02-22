@@ -1,0 +1,9 @@
+<!-- components/message/receive/receive.wxml -->
+<wxs src="../../../utils/timeUtil.wxs" module="getTime" />
+<view class="container">
+    <view class="angle"></view>
+    <view class="info-box">
+        <view class="message">{{Message.content}}</view>
+        <view class="time">{{getTime.Dates(Message.createTime)}}</view>
+    </view>
+</view>

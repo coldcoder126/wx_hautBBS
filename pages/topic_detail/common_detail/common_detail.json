@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "avatar-compt":"/components/avatar/avatar",
+    "topic-detail":"/components/topic/common_detail/common_detail",
+    "comment-compt":"/components/comment/comment/comment",
+    "reply-compt":"/components/reply/reply",
+    "share":"/components/widget/share/share"
+  },
+  "enablePullDownRefresh": true
+}

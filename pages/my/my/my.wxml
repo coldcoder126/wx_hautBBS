@@ -1,0 +1,45 @@
+<wxs src="../../../utils/genderUtil.wxs" module="getGender" />
+<view wx:if="{{authorized}}" class="container">
+  <view class="info-container">
+    <view class="message-box">
+      <image bind:tap="onMessage" class="message" src="{{haveMessage?'images/_message.png':'images/message.png'}}" />
+    </view>
+    <view class="userinfo">
+      <image class="avatar" bind:tap="onPreview" src="{{avatarUrl}}" />
+      <view class="text-container">
+        <text class="nickname">{{userInfo.nickName}}</text>
+        <view class="score-gender">
+          <text class="score">{{score}}分</text>
+          <image class="gender" src="{{getGender.Gender(userInfo.gender)}}" />
+        </view>
+      </view>
+      <view hidden="{{signed}}" class="sign-container">
+        <image  bind:tap="onSign" class="sign" src="images/sign.png" />
+      </view>
+    </view>
+    <text class="description">{{userInfo.description}}</text>
+  </view>
+  <view class="function-area">
+    <view bind:tap="onMyInfo" class="function">
+      <view class="function-text">我的资料</view>
+      <image class="in" src="images/in.png" />
+    </view>
+    <view bind:tap="onMyTopic" class="function">
+      <view class="function-text">我的发布</view>
+      <image class="in" src="images/in.png" />
+    </view>
+    <view bind:tap="onMyNotification" class="function">
+      <view class="function-text">我的通知</view>
+      <image class="in" src="{{haveNotification?'images/_in.png':'images/in.png'}}" />
+    </view>
+    <view class="function">
+      <view class="function-text" bind:tap="onAbout">关于</view>
+      <image class="in" src="images/in.png" />
+    </view>
+  </view>
+</view>
+<view hidden="{{authorized}}" class="login">
+  <button class="button" size="default" type="primary" open-type='getUserInfo' bindgetuserinfo='onGetUserInfo'>
+    登录
+  </button>
+</view>

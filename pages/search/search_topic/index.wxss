@@ -1,0 +1,39 @@
+/* pages/search/search_topic/index.wxss */
+page{
+    background-color: #f8f8f8;
+    height:100%;
+}
+.nothing{
+    height: 88rpx;
+}
+.picker{
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    width: 100%;
+}
+.section{
+    width:100%;
+    position: relative;
+    top: 300rpx;
+}
+.section__title{
+    font-size: 28rpx;
+    display: flex;
+    justify-content: center;
+}
+.none{
+    width: 100%;
+    font-size: 28rpx;
+    display: flex;
+    justify-content: center;
+    margin-top:30rpx;
+}
+
+.header{
+    font-size: 26rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 26rpx 10rpx 10rpx 10rpx;
+}

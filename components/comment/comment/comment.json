@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "sub-comment":"/components/comment/sub_comment/sub_comment",
+    "avatar":"/components/avatar/avatar"
+  }
+}

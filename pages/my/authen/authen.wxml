@@ -1,0 +1,22 @@
+<!--pages/my/authen/authen.wxml-->
+<view class="container">
+<view class="notice" >学生认证为了区分用户是否为学生，目前仅对河南工业大学开放，认证成功后用户信息界面会出现学生认证标志，认证成功后不可修改。</view>
+
+<view wx:if="{{userInfo.stuid}}" class="input-area">我的学号：{{userInfo.stuid}} </view>
+<view wx:if="{{!userInfo.stuid}}" >
+    <form bindsubmit="onSubmit">
+        <view class="notice">学号</view>
+    <view class="input-area" >
+        <input name="stuid" maxlength="14" style="width:100%;" class="input"/>
+    </view>
+            <view class="notice">密码</view>
+    <view class="input-area" >
+        <input password="{{true}}" name="pwd" maxlength="14" style="width:100%;" class="input"/>
+    </view>
+    <button class="button" type="primary" size="default" form-type="submit">提交</button>
+    </form>
+</view>
+<view class="nothing"></view>
+<view  class="notice "  ><text >{{authen_txt}}</text></view>
+<view class="input-area" wx:if="{{userInfo.authenName}}" >我的认证：{{userInfo.authenName}}</view>
+</view>

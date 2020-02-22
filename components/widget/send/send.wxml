@@ -1,0 +1,2 @@
+<!--components/widget/send/send.wxml-->
+    <image bind:tap="onSend" class="img" src="images/send.png" />

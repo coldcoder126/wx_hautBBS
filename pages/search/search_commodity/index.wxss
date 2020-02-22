@@ -1,0 +1,19 @@
+/* pages/search/search_commodity/index.wxss */
+page{
+    background-color: #f8f8f8;
+    height:100%;
+}
+.avatar{
+    width: 100%;
+}
+.container{
+    position: relative;
+    top:80rpx;
+}
+.header{
+    font-size: 26rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 26rpx 10rpx 10rpx 10rpx;
+}

@@ -1,0 +1,13 @@
+<!-- components/navi/navi.wxml -->
+<view class='container'>
+    <view class='navi-container'>
+        <view class="module">
+            <slot  name="module1" />
+            <slot  name="module2" />
+            <slot  name="module3" />
+        </view>
+        <view bindtap="onSearch" class="icon">
+            <image class='search' src="image/search.png" />
+        </view>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "notice":"/components/notice/notice"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "我的通知"
+}

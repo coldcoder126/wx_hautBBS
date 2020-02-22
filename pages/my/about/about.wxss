@@ -1,0 +1,56 @@
+/* pages/my/about/about.wxss */
+page{
+  background-color: #f8f8f8
+}
+.function{
+  padding: 24rpx;
+  display: flex;
+  align-items: center;
+  margin: 6rpx;
+  background-color: #FFF;
+}
+    
+.function-text{
+display: flex;
+flex-direction: row;
+font-weight: 500;
+z-index: 20;
+}
+    
+.icon{
+  width: 50rpx;
+  height: 50rpx;
+  z-index: 20;
+  }
+
+.function{
+  padding: 24rpx;
+  display: flex;
+  align-items: center;
+  margin: 6rpx;
+  background-color: #FFF;
+}
+.context{
+  margin:0 10rpx;
+  font-size: 28rpx;
+}
+
+.feedback{
+  display:flex;
+  padding:0 !important;
+  border: 0 !important;
+  margin:0 !important;
+  width: 60%;
+  height: 20px;
+  background-color: #fff;
+
+}
+button::after{
+  border:none;
+  }
+button:not([size='mini']){
+  min-height: 20px;
+}
+.botton-hover{
+  position:absolute;
+}

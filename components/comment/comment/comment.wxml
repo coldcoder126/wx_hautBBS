@@ -1,0 +1,17 @@
+<!-- 一个评论块，其中包含用户昵称，发布时间，评论内容，可点击 -->
+<view class='container'>
+    <text bindtap="onReply" class="content">{{Comment.content}}</text>
+    <view class="sub-comment" wx:if="{{Comment.childTopicCommentVoList.length>0 && Comment.childTopicCommentVoList.length<3}}">
+        <sub-comment ToUid="{{Comment.fromUser.uid}}" Level="{{Comment.level}}" bind:reply="onSubReply" ChildComments="{{Comment.childTopicCommentVoList}}"></sub-comment>
+    </view>
+    <view class="sub-comment" wx:if="{{Comment.childTopicCommentVoList.length>2}}">
+        <text bindtap="seeMore" class="seeMore">
+            查看{{Comment.childTopicCommentVoList.length}}条评论>>
+        </text>
+        <!-- 点击此处将打开子页面显示更多 -->
+    </view>
+</view>
+<view wx:if="{{more}}" class="mask" bind:tap="onClose"></view>
+<scroll-view wx:if="{{more}}" scroll-y class="scroll" catchtouchmove="true">
+    <sub-comment bind:reply="onSubReply" ChildComments="{{Comment.childTopicCommentVoList}}" ToUid="{{Comment.fromUser.uid}}" Level="{{Comment.level}}"></sub-comment>
+</scroll-view>

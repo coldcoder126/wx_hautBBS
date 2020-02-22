@@ -1,0 +1,29 @@
+/* pages/my/authen/authen.wxss */
+page{
+    background-color: #f8f8f8
+  }
+  .notice{
+    margin: 6rpx 20rpx;
+    font-size: 28rpx;
+    color:#999999;
+    text-indent: 2em;
+}
+
+.button{
+    margin-top: 30px;
+    width: 80%;
+      border-radius: 98rpx;
+    }
+
+.input-area{
+  padding: 6rpx 30rpx;
+  background-color: #FFF;
+  margin:20rpx 0;
+    }
+
+.last-row{
+    margin: 10rpx;
+}
+.nothing{
+  height: 60rpx;
+}

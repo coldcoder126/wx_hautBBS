@@ -1,0 +1,59 @@
+/* components/avatar/avatar.wxss */
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 30rpx;
+  margin-top:30rpx;
+}
+
+.sub-container{
+  display: flex;
+}
+
+.text-container{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 8rpx;
+}
+.text-container-row{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 8rpx;
+}
+
+.avatar{
+  /* width: 80rpx;
+  height: 80rpx; */
+  /* margin-left: 30rpx; */
+  border-radius: 50%;
+}
+.nickName{
+justify-content: flex-end; 
+  font-size: 30rpx;
+  font-weight: 600;
+  max-width:200px;
+  text-overflow: -o-ellipsis-lastline;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.slot{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right:30rpx;
+  width: 100rpx;
+
+}
+.time{
+  display: flex;
+  font-size: 20rpx;
+  font-weight: 300;
+  width: 180rpx;
+  align-items:center;
+}

@@ -1,0 +1,18 @@
+<!-- pages/my/msg-detail/msg-detail.wxml -->
+<view class="header">
+    <image class="avatar" src="{{currentAvatar}}" />
+    <view class="name">{{currentName}}</view>
+</view>
+<view class="container">
+    <block class="block" wx:for="{{messageList}}" wx:key="index" style="display: block;">
+        <receive-compt wx:if="{{item.fromUid == currentFromUid}}" Message="{{item}}"></receive-compt>
+        <send-compt wx:if="{{item.fromUid != currentFromUid}}" Message="{{item}}"></send-compt>
+    </block>
+    <view class="nothing"></view>
+</view>
+
+<reply bind:sending="onSend" value="{{inputVal}}" ></reply>
+<!-- <view class="input-area">
+    <image class="myAvatar" src="{{myAvatar}}" />
+    <input class="input" bindconfirm="onSend" placeholder=" 回复：{{currentName}}" value="{{inputVal}}" />
+</view> -->

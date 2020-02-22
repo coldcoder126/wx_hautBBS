@@ -1,0 +1,48 @@
+<!-- pages/publish/publish_activity/publish_activity.wxml -->
+<view >
+<form bindsubmit="onSubmit">
+    <view class="notice">活动名称</view>
+    <view class="input-area">
+        <textarea name="title" class="title" style="font-size:34rpx;  font-weight: 600;" auto-height />
+    </view>
+    <view class="notice">活动日期</view>
+    <view class="input-area">
+        <picker mode="date" value="{{date}}" start="2018-09-01" end="2025-09-01" bindchange="bindDateChange">
+            <view class="picker">活动日期:  {{date}}</view>
+        </picker>
+    </view>
+    <view class="notice">详细时间</view>
+    <view class="input-area">
+        <picker mode="time" value="{{beginTime}}" start="07:00" end="22:00" bindchange="bindBeginTime">
+            <view class="picker">开始时间:  {{beginTime}}</view>
+        </picker>
+        </view>
+    <view class="input-area">
+        <picker mode="time" value="{{endTime}}" start="08:00" end="23:00" bindchange="bindEndTime">
+            <view class="picker">结束时间:  {{endTime}}</view>
+        </picker>
+    </view>
+        <view class="notice">活动地点</view>
+    <view class="input-area">
+        <textarea name="place" class="title" style="font-size:34rpx;  font-weight: 500;" auto-height />
+    </view>
+        <view class="notice">主办方</view>
+    <view class="input-area">
+        <textarea name="sponsor" class="title" style="font-size:34rpx;  font-weight: 500;" auto-height />
+    </view>
+    <view class="notice">活动详情</view>
+    <view class="input-area">
+        <textarea name="description" class="description" show-confirm-bar="{{true}}" auto-height />
+    </view>
+    <view class="notice">选择图片</view>
+    <view wx:if="{{canChoose}}" class="sub-container">
+        <image bind:tap="onUpload" class="image" src="images/add.png" />
+    </view>
+    <view wx:if="{{!canChoose}}" class="sub-container">
+        <block wx:for="{{tempFilePaths}}" wx:key="index">
+            <image class="image" mode="aspectFill" src="{{item}}" />
+        </block>
+    </view>
+    <button class="button" type="primary" size="default" form-type="submit">发布</button>
+</form>
+</view>

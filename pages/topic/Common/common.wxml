@@ -1,0 +1,34 @@
+<!--pages/topic/Common/common.wxml-->
+<view wx:if="{{!searching}}" class='container' bind:onSearching="onSearching">
+  <navi-compt  >
+    <view class= bind:tap="onSet1" class="select-box" slot="module1"><view class="{{selected==1?'selected1':'unselected' }}" >交流区</view></view>
+    <view  bind:tap="onSet2" class="select-box" slot="module2"><view class="{{selected==2?'selected2':'unselected' }} ">失物招领<view class="new" hidden="{{new2}}"/></view></view>
+    <view bind:tap="onSet3" class="select-box" slot="module3"><view class="{{selected==3?'selected3':'unselected' }} ">活动<view class="new" hidden="{{new3}}"/></view></view>
+  </navi-compt>
+  <view class="nothing"></view>
+  <block wx:if="{{selected==1}}" wx:for="{{topicList}}" wx:key="id" style="display: block;">
+    <avatar-compt class="avatar" User="{{item.basicUser}}" Time="{{item.updateTime}}">
+      <text wx:if="{{!isAdmin}}" class='comment_num' slot="comment_num">{{item.commentNum}}</text>
+      <image wx:if="{{!isAdmin}}" slot="comment_icon" class='comment_icon' src='../images/comment2.png' />
+      <image wx:if="{{isAdmin}}" slot="comment_icon" class="delete" bind:tap="onDelete" src="../images/delete.png" data-id="{{item.id}}" data-title="{{item.title}}" data-uid="{{item.basicUser.uid}}" />
+    </avatar-compt>
+    
+    <content-compt topic="{{item}}">
+    </content-compt>
+  </block>
+    <block wx:if="{{selected==2}}" wx:for="{{lostFound}}" wx:key="id" style="display: block;">
+    <avatar-compt class="avatar" User="{{item.basicUser}}" Time="{{item.updateTime}}">
+      <text wx:if="{{!isAdmin}}" class='comment_num' slot="comment_num">{{item.commentNum}}</text>
+      <image wx:if="{{!isAdmin}}" slot="comment_icon" class='comment_icon' src='../images/comment2.png' />
+      <image wx:if="{{isAdmin}}" slot="comment_icon" class="delete" bind:tap="onDelete" src="../images/delete.png" data-id="{{item.id}}" data-title="{{item.title}}" data-uid="{{item.basicUser.uid}}" />
+    </avatar-compt>
+    <content-compt topic="{{item}}">
+    </content-compt>
+  </block>
+    <block wx:if="{{selected==3}}" wx:for="{{activityList}}" wx:key="id" style="display: block;">
+    <act-compt Activity="{{item}}" ></act-compt>
+  </block>
+</view>
+<view wx:if="{{hasStorage}}" class="notice">没有内容？下拉试试↓</view>
+<!-- <search-compt bind:cancel="onCancel" wx:if="{{searching}}" /> -->
+<publish-compt wx:if="{{authend}}" bind:publish="onPublish" />
